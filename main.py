@@ -1,4 +1,4 @@
-import requests,os
+import requests
 from time import sleep
 from discord_webhook import DiscordWebhook, DiscordEmbed
 

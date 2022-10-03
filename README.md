@@ -1,6 +1,9 @@
 # Group-Sales-Notifier
 *Checks every 5 seconds to avoid Rate limits*
 
+
+**DONT YELL AT ME FOR SLOPPY CODE THIS IS MADE IN LIKE 2 MINS AND I DONT WANT TO FIX, ITS VERY EASY JUST FIX IT YOURSELF IF U ANNOYED**
+
 You will need to do `pip install discord-webhook`
 
 Im not going to help people setup cus its self explanitory, and your probably a skid if you need help.

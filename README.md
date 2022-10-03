@@ -11,4 +11,4 @@ Im not going to help people setup cus its self explanitory, and your probably a 
 Example of what it looks like: [Image](https://i.ibb.co/vV92hv6/KzlxWIdw.png) **I CAN REMOVE CREDITS SINCE I MADE SKID!**
 
 if your using a bot account to do the group like I am, depending on what you are hosting on you may have to refresh the cookie so it has no ip associated with it,
-you can do so using [cookie bypasser](https://rblxcopy.net/cookierefresh.php)
+you can do so using [cookie bypasser](https://rblxcopy.net/cookierefresh.php) *<-- only use if your hosting on a server or replit or something, if your self hosint gjust use same cookie ofc*

@@ -25,7 +25,7 @@ def compare():
     predat = getdata()
     print(predat)
     while getnew() == predat:
-        sleep(5)
+        sleep(10)
     else:
         r = requests.get(f"https://economy.roblox.com/v2/groups/{group_id}/transactions?cursor=&limit=100&sortOrder=Asc&transactionType=Sale",headers=headers)
         jso = r.json()

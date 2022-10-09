@@ -22,31 +22,35 @@ def getnew():
     return jso["data"][0]
 
 def compare():
-    predat = getdata()
-    print(predat)
-    while getnew() == predat:
-        sleep(10)
-    else:
-        r = requests.get(f"https://economy.roblox.com/v2/groups/{group_id}/transactions?cursor=&limit=100&sortOrder=Asc&transactionType=Sale",headers=headers)
-        jso = r.json()
-        user_id = jso['data'][0]['agent']['id']
-        username = jso['data'][0]['agent']['name']
-        product_name = jso['data'][0]['details']['name']
-        Product_Price = jso['data'][0]['currency']['amount']
-        desc = f"""
-```fix
-User Id: {user_id}
-Username: {username}
-Product Name: {product_name}
-Product Price: {Product_Price} Robux
-```
-"""
-        embed = DiscordEmbed(title='New Sale!!', description=desc, color='FFFF00')
-        embed.set_thumbnail(url=f"https://www.roblox.com/headshot-thumbnail/image?userId={user_id}&width=420&height=420&format=png")
-        embed.set_timestamp()
-        embed.set_footer(text='By LiteEagle262#2777') # dont be a skid leave the credits bruh
-        webhook.add_embed(embed)
-        response = webhook.execute()
+    try:
+        predat = getdata()
+        print(predat)
+        while getnew() == predat:
+            sleep(1)
+        else:
+            r = requests.get("https://economy.roblox.com/v2/groups/11648687/transactions?cursor=&limit=100&sortOrder=Asc&transactionType=Sale",headers=headers)
+            jso = r.json()
+            user_id = jso['data'][0]['agent']['id']
+            username = jso['data'][0]['agent']['name']
+            product_name = jso['data'][0]['details']['name']
+            Product_Price = jso['data'][0]['currency']['amount']
+            desc = f"""
+    ```fix
+    User Id: {user_id}
+    Username: {username}
+    Product Name: {product_name}
+    Product Price: {Product_Price} Robux
+    ```
+    """
+            embed = DiscordEmbed(title='New Sale!!', description=desc, color='FFFF00')
+            embed.set_thumbnail(url=f"https://www.roblox.com/headshot-thumbnail/image?userId={user_id}&width=420&height=420&format=png")
+            embed.set_timestamp()
+            embed.set_footer(text='Eagles DHC')
+            webhook.add_embed(embed)
+            response = webhook.execute()
+            start()
+    except:
+        print("A error has occurred, restarting")
         start()
 
 start()

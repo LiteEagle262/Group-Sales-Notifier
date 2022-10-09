@@ -1,5 +1,4 @@
 # Group-Sales-Notifier
-*Checks every 5 seconds to avoid Rate limits*
 
 
 **DONT YELL AT ME FOR SLOPPY CODE THIS IS MADE IN LIKE 2 MINS AND I DONT WANT TO FIX, ITS VERY EASY JUST FIX IT YOURSELF IF U ANNOYED**

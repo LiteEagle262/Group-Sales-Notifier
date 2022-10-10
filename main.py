@@ -45,7 +45,7 @@ def compare():
             embed = DiscordEmbed(title='New Sale!!', description=desc, color='FFFF00')
             embed.set_thumbnail(url=f"https://www.roblox.com/headshot-thumbnail/image?userId={user_id}&width=420&height=420&format=png")
             embed.set_timestamp()
-            embed.set_footer(text='Eagles DHC')
+            embed.set_footer(text='Made by LiteEagle262#2777')
             webhook.add_embed(embed)
             response = webhook.execute()
             start()

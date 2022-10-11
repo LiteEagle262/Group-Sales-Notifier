@@ -14,7 +14,9 @@ def getdata():
     return jso["data"][0]
 
 def start():
+    print("Running")
     compare()
+    return
 
 def getnew():
     r = requests.get(f"https://economy.roblox.com/v2/groups/{group_id}/transactions?cursor=&limit=100&sortOrder=Asc&transactionType=Sale",headers=headers)
@@ -49,8 +51,10 @@ def compare():
             webhook.add_embed(embed)
             response = webhook.execute()
             start()
+            return
     except:
         print("A error has occurred, restarting")
         start()
+        return
 
 start()

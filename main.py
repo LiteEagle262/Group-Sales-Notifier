@@ -30,7 +30,7 @@ def compare():
         while getnew() == predat:
             sleep(1)
         else:
-            r = requests.get(f"https://economy.roblox.com/v2/groups/{GROUP_ID}/transactions?cursor=&limit=100&sortOrder=Asc&transactionType=Sale",headers=headers)
+            r = requests.get(f"https://economy.roblox.com/v2/groups/{group_id}/transactions?cursor=&limit=100&sortOrder=Asc&transactionType=Sale",headers=headers)
             jso = r.json()
             user_id = jso['data'][0]['agent']['id']
             username = jso['data'][0]['agent']['name']
